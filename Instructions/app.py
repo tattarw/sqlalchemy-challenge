@@ -48,7 +48,7 @@ def welcome():
 @app.route("/api/v1.0/precipitation")
 def precipitation():
     session = Session(engine)
-    results = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date>='2016-08-23').order_by(Measurement.date)
+    results = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date>='2016-08-24').order_by(Measurement.date)
     session.close()
 
     precipitation_scores= []
