@@ -41,8 +41,8 @@ def welcome():
         f"/api/v1.0/precipitation<br/>"
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
-        f"/api/v1.0/<start><br/>"
-        f"/api/v1.0/<start>/<end>"
+        f"/api/v1.0/start<br/>"
+        f"/api/v1.0/start/end<br/>"
     )
 
 @app.route("/api/v1.0/precipitation")
@@ -122,7 +122,6 @@ def temperature_end(start,end):
     session.close()
  # Convert list of tuples into normal list
     temperature_end = list(np.ravel(results))
-
     return jsonify(temperature_end)
                             
 
